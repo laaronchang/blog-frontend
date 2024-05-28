@@ -1,27 +1,30 @@
-function App() {
+function Header() {
+
   return (
-    <div>
       <header>
         <a href="#">Home</a> | <a href="#posts-index">All posts</a> | <a href="#posts-new">New post</a>
       </header>
+      )
+    }
 
-      <div id="posts-new">
-        <h1>New post</h1>
-        <p id="first-post">Title: 
-        <input type="text" id="myText" value=""></input></p>
-        <p>Body: 
-        <input type="text" id="myText" value=""></input></p>
-        <br />
-        <button onclick="myFunction()">Submit</button>
-      </div>
-
+function NewPost() {
+  return (
+    <div id="posts-new">
+      <h1>New post</h1>
+      <p id="first-post">Title: 
+      <input type="text" id="myText" value=""></input></p>
+      <p>Body: 
+      <input type="text" id="myText" value=""></input></p>
       <br />
-      <br />
+      <button onclick="myFunction()">Submit</button>
+    </div>
+      )
+    }
 
+function PostsIndex(){
+  return (
       <div id="posts-index">
         <h1>All posts</h1>
-      </div>
-
       <div>
         <h2 id="folgers">The best part...</h2>
         <p>Of waking up, is Folgers in your cup.</p>
@@ -36,10 +39,25 @@ function App() {
         <h2 id="aliens">Aliens?</h2>
         <p>Elon Musk humorously admitted to being an alien, generating buzz and curiosity. He further explored the concept of humans giving meaning to AI, drawing parallels to the relationship between the limbic system and cortex in the human brain.</p>
       </div>
+    </div>
+  )
+}
 
-      <footer>
-        <p>Copyright 20XX</p>
-      </footer>
+function Footer() {
+  return (
+    <footer>
+      <p>Copyright 2023</p>
+    </footer>
+  )
+}
+
+
+function App() {
+  return (
+    <div>
+      <Header />
+      <PostsIndex />
+      <Footer />
     </div>
   );
 }
