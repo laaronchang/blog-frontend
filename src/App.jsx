@@ -21,12 +21,14 @@ function NewPost() {
       )
     }
 
-function PostsIndex(){
+function PostsIndex(props){
+  console.log(props.postTitle)
   return (
       <div id="posts-index">
         <h1>All posts</h1>
       <div>
         <h2 id="folgers">The best part...</h2>
+        <h2>{props.postTitle}</h2>
         <p>Of waking up, is Folgers in your cup.</p>
       </div>
 
@@ -51,12 +53,21 @@ function Footer() {
   )
 }
 
+function Content(){
+  let postTitle = "this is a post title test via props"
+  return(
+    <div>
+      <NewPost />
+      <PostsIndex postTitle={postTitle} />
+   </div>
+  )
+}
 
 function App() {
   return (
     <div>
       <Header />
-      <PostsIndex />
+      <Content />
       <Footer />
     </div>
   );
